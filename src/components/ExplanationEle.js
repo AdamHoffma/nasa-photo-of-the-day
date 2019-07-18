@@ -1,7 +1,8 @@
 import React from "react"
+import {Segment} from "semantic-ui-react"
 
 export default function ExplanationElement(props) {
     return (
-    <p>Explanation: <br/>{props.info}</p>
+    <Segment size="big" raised>Explanation: <br/>{props.info}</Segment>
     )
 }

@@ -4,12 +4,15 @@ import ImageElement from "./ImgEle.js"
 import TitleElement from "./TitleEle.js"
 import DateElement from "./DateEle.js"
 import ExplanationElement from "./ExplanationEle.js"
+import LogoElement from "./logo.js"
+import HeaderElement from "./Header.js"
+
 function CardContent(){
     const [nasa, setNasa] = useState([]);
     useEffect(() => {
     
     
-    axios.get('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY')
+    axios.get('https://api.nasa.gov/planetary/apod?api_key=wWyCmewv90fyLT1KV68qUwsHJlUNiZ5ghWvIOEc5')
     .then(returning => {      
       const photo = returning.data
       setNasa(photo)
@@ -28,6 +31,8 @@ function CardContent(){
     },[])
     return (
       <div>
+        <LogoElement/>
+        <HeaderElement/>
         <TitleElement headline={nasa.title}/>
         <DateElement date={nasa.date}/>
         <ImageElement url={nasa.url}/>

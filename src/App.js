@@ -1,9 +1,8 @@
 import React from "react";
 import axios from "axios";
 import "./App.css";
-import CardContent from "./components/Img.js"
-import ImageElement from "./components/ImgEle.js"
-import TitleElement from "./components/TitleEle.js"
+import CardContent from "./components/CardContent.js"
+
 
 function App() {
   return (
